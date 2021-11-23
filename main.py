@@ -14,6 +14,7 @@ from pybricks.media.ev3dev import SoundFile, ImageFile, Font
 
 
 # Create your objects here.
+
 ev3 = EV3Brick()
 ev3.speaker.beep()
 
@@ -30,7 +31,9 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=70, axle_track=104)
 walls = 0
 room = list()
 degree = 0
+
 # Write your program here.
+
 ev3.screen.print(walls)
 lwash.run(1000)
 rwash.run(1000)
