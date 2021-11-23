@@ -28,7 +28,7 @@ lsens = UltrasonicSensor(Port.S4)
 ev3.screen.set_font(family=None, size=64, bold=True, monospace=False, lang='en', script=None)
 robot = DriveBase(left_motor, right_motor, wheel_diameter=70, axle_track=104)
 
-walls = 0
+walls = 1
 room = list()
 degree = 0
 
@@ -40,7 +40,7 @@ rwash.run(1000)
 ev3.speaker.play_file('secret.wav')
 
 while (not(Button.CENTER in ev3.buttons.pressed())):
-    if (Button.LEFT in ev3.buttons.pressed()):
+    if (Button.LEFT in ev3.buttons.pressed() and walls!=1):
         walls-=1
         ev3.screen.print(walls)
         wait(250)
